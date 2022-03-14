@@ -12,6 +12,15 @@ class Article extends Model
     use HasFactory;
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'created_at' => 'datetime',
+    ];
+
+    /**
      * Get the user that owns the Article
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
